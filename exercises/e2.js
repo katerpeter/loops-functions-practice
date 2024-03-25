@@ -4,7 +4,15 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
-
+  var perfectSquares = [];
+  var num;
+  for (var i = 0; i <= max; i++){
+    num = Math.sqrt(i);
+    if (Number.isInteger(num)){
+      perfectSquares.push(i);
+    }
+  }
+  return perfectSquares;
 }
 
 // === TEST YOURSELF ===

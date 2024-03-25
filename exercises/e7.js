@@ -6,7 +6,18 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
+  var bal = 10000000, isLowest;
+  for (var i = 0; i < array.length; i++){
+    if (array[i].balance < bal && array[i].balance > 0){
+      bal = array[i].balance;
+      isLowest = i;
+    }
+  }
+  var result = [array[isLowest]];
+  if (isLowest == undefined) {
+    result = [];
+  }
+  return result;
 }
 
 // === TEST YOURSELF ===
